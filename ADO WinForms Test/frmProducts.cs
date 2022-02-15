@@ -35,7 +35,6 @@ namespace ADO_WinForms_Test
             dataGridView1.DataSource = dvProducts;
             dataGridView1.Columns["productDescription"].Visible = false;
             dataGridView1.AutoResizeColumns();
-
             base.OnLoad(e);
         }
 

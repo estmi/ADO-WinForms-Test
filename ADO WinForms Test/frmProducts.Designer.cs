@@ -131,7 +131,7 @@ namespace ADO_WinForms_Test
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(261, 33);
+            this.button7.Location = new System.Drawing.Point(685, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 8;
@@ -141,7 +141,7 @@ namespace ADO_WinForms_Test
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(369, 33);
+            this.button8.Location = new System.Drawing.Point(685, 51);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 9;
@@ -151,7 +151,7 @@ namespace ADO_WinForms_Test
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(501, 33);
+            this.button9.Location = new System.Drawing.Point(255, 33);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 10;
