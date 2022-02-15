@@ -42,5 +42,14 @@ namespace ADO_WinForms_Test
             };
             frm.Show();
         }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            var frm = new frmProducts(classiccarDataSet)
+            {
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            frm.Show();
+        }
     }
 }

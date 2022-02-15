@@ -37,10 +37,6 @@
             System.Windows.Forms.Label statusLabel;
             System.Windows.Forms.Label commentsLabel;
             System.Windows.Forms.Label customerNumberLabel;
-            this.classiccarDataSet = new ADO_WinForms_Test.classiccarDataSet();
-            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordersTableAdapter = new ADO_WinForms_Test.classiccarDataSetTableAdapters.ordersTableAdapter();
-            this.tableAdapterManager = new ADO_WinForms_Test.classiccarDataSetTableAdapters.TableAdapterManager();
             this.ordersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -61,16 +57,21 @@
             this.statusTextBox = new System.Windows.Forms.TextBox();
             this.commentsTextBox = new System.Windows.Forms.TextBox();
             this.customerNumberTextBox = new System.Windows.Forms.TextBox();
-            this.orderdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderdetailsTableAdapter = new ADO_WinForms_Test.classiccarDataSetTableAdapters.orderdetailsTableAdapter();
-            this.orderdetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.orderdetailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.btnEmployeeOffice = new System.Windows.Forms.Button();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.classiccarDataSet = new ADO_WinForms_Test.classiccarDataSet();
+            this.ordersTableAdapter = new ADO_WinForms_Test.classiccarDataSetTableAdapters.ordersTableAdapter();
+            this.tableAdapterManager = new ADO_WinForms_Test.classiccarDataSetTableAdapters.TableAdapterManager();
+            this.orderdetailsTableAdapter = new ADO_WinForms_Test.classiccarDataSetTableAdapters.orderdetailsTableAdapter();
+            this.orderdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEmployeeOffice = new System.Windows.Forms.Button();
+            this.orderdetailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnProducts = new System.Windows.Forms.Button();
             orderNumberLabel = new System.Windows.Forms.Label();
             orderDateLabel = new System.Windows.Forms.Label();
             requiredDateLabel = new System.Windows.Forms.Label();
@@ -78,41 +79,14 @@
             statusLabel = new System.Windows.Forms.Label();
             commentsLabel = new System.Windows.Forms.Label();
             customerNumberLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.classiccarDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingNavigator)).BeginInit();
             this.ordersBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderdetailsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classiccarDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderdetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderdetailsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderdetailsDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // classiccarDataSet
-            // 
-            this.classiccarDataSet.DataSetName = "classiccarDataSet";
-            this.classiccarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ordersBindingSource
-            // 
-            this.ordersBindingSource.DataMember = "orders";
-            this.ordersBindingSource.DataSource = this.classiccarDataSet;
-            // 
-            // ordersTableAdapter
-            // 
-            this.ordersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.customersTableAdapter = null;
-            this.tableAdapterManager.employeesTableAdapter = null;
-            this.tableAdapterManager.officesTableAdapter = null;
-            this.tableAdapterManager.orderdetailsTableAdapter = this.orderdetailsTableAdapter;
-            this.tableAdapterManager.ordersTableAdapter = this.ordersTableAdapter;
-            this.tableAdapterManager.paymentsTableAdapter = null;
-            this.tableAdapterManager.productlinesTableAdapter = null;
-            this.tableAdapterManager.productsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = ADO_WinForms_Test.classiccarDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // ordersBindingNavigator
             // 
@@ -358,20 +332,6 @@
             this.customerNumberTextBox.Size = new System.Drawing.Size(200, 20);
             this.customerNumberTextBox.TabIndex = 14;
             // 
-            // orderdetailsBindingSource
-            // 
-            this.orderdetailsBindingSource.DataMember = "orderdetails";
-            this.orderdetailsBindingSource.DataSource = this.classiccarDataSet;
-            // 
-            // orderdetailsTableAdapter
-            // 
-            this.orderdetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // orderdetailsBindingSource1
-            // 
-            this.orderdetailsBindingSource1.DataMember = "orderdetails_ibfk_1";
-            this.orderdetailsBindingSource1.DataSource = this.ordersBindingSource;
-            // 
             // orderdetailsDataGridView
             // 
             this.orderdetailsDataGridView.AutoGenerateColumns = false;
@@ -387,6 +347,52 @@
             this.orderdetailsDataGridView.Name = "orderdetailsDataGridView";
             this.orderdetailsDataGridView.Size = new System.Drawing.Size(746, 220);
             this.orderdetailsDataGridView.TabIndex = 15;
+            // 
+            // btnEmployeeOffice
+            // 
+            this.btnEmployeeOffice.Location = new System.Drawing.Point(463, 44);
+            this.btnEmployeeOffice.Name = "btnEmployeeOffice";
+            this.btnEmployeeOffice.Size = new System.Drawing.Size(77, 27);
+            this.btnEmployeeOffice.TabIndex = 16;
+            this.btnEmployeeOffice.Text = "Empleats";
+            this.btnEmployeeOffice.UseVisualStyleBackColor = true;
+            this.btnEmployeeOffice.Click += new System.EventHandler(this.btnEmployeeOffice_Click);
+            // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataMember = "orders";
+            this.ordersBindingSource.DataSource = this.classiccarDataSet;
+            // 
+            // classiccarDataSet
+            // 
+            this.classiccarDataSet.DataSetName = "classiccarDataSet";
+            this.classiccarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ordersTableAdapter
+            // 
+            this.ordersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.customersTableAdapter = null;
+            this.tableAdapterManager.employeesTableAdapter = null;
+            this.tableAdapterManager.officesTableAdapter = null;
+            this.tableAdapterManager.orderdetailsTableAdapter = this.orderdetailsTableAdapter;
+            this.tableAdapterManager.ordersTableAdapter = this.ordersTableAdapter;
+            this.tableAdapterManager.paymentsTableAdapter = null;
+            this.tableAdapterManager.productlinesTableAdapter = null;
+            this.tableAdapterManager.productsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ADO_WinForms_Test.classiccarDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // orderdetailsTableAdapter
+            // 
+            this.orderdetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // orderdetailsBindingSource
+            // 
+            this.orderdetailsBindingSource.DataMember = "orderdetails";
+            this.orderdetailsBindingSource.DataSource = this.classiccarDataSet;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -418,21 +424,27 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "orderLineNumber";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // btnEmployeeOffice
+            // orderdetailsBindingSource1
             // 
-            this.btnEmployeeOffice.Location = new System.Drawing.Point(463, 44);
-            this.btnEmployeeOffice.Name = "btnEmployeeOffice";
-            this.btnEmployeeOffice.Size = new System.Drawing.Size(77, 27);
-            this.btnEmployeeOffice.TabIndex = 16;
-            this.btnEmployeeOffice.Text = "Empleats";
-            this.btnEmployeeOffice.UseVisualStyleBackColor = true;
-            this.btnEmployeeOffice.Click += new System.EventHandler(this.btnEmployeeOffice_Click);
+            this.orderdetailsBindingSource1.DataMember = "orderdetails_ibfk_1";
+            this.orderdetailsBindingSource1.DataSource = this.ordersBindingSource;
+            // 
+            // btnProducts
+            // 
+            this.btnProducts.Location = new System.Drawing.Point(493, 99);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(75, 23);
+            this.btnProducts.TabIndex = 17;
+            this.btnProducts.Text = "Products";
+            this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 619);
+            this.Controls.Add(this.btnProducts);
             this.Controls.Add(this.btnEmployeeOffice);
             this.Controls.Add(this.orderdetailsDataGridView);
             this.Controls.Add(orderNumberLabel);
@@ -453,14 +465,14 @@
             this.Name = "frmPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.classiccarDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingNavigator)).EndInit();
             this.ordersBindingNavigator.ResumeLayout(false);
             this.ordersBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderdetailsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classiccarDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderdetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderdetailsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderdetailsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,6 +514,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Button btnEmployeeOffice;
+        private System.Windows.Forms.Button btnProducts;
     }
 }
 

@@ -23,8 +23,10 @@ namespace ADO_WinForms_Test
         }
         protected override void OnLoad(EventArgs e)
         {
-            
-            dgvEmpleats.DataSource = employeesTableAdapter1.GetDataEmployeesAndOffices();
+            employeesTableAdapter1.FillEmployeesAndOffices(ds.employees);
+            dgvEmpleats.DataSource = ds.employees;
+            dgvEmpleats.Columns["officeCode"].Visible = false;
+            dgvEmpleats.AutoResizeColumns();
             base.OnLoad(e);
         }
     }
